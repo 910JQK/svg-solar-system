@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Diagram of the Solar System</title>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="solar_system.js"></script>
+    <script type="text/javascript" src="paint.js"></script>
+    <script type="text/javascript" src="interactive.js"></script>
+    <link rel="stylesheet" href="graph.css" />
+    <style>
+      .container {display: flex; flex-direction: row; justify-content: center;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <svg id="svg_inner" width="500" height="500">
+	<g transform="matrix(1, 0, 0, -1, 250, 250)">
+	  <line x1="0" y1="0" x2="250" y2="0" class="equinox_line" />
+	  <circle class="sun" cx="0" cy="0" r="5" />
+	  <g id="g_inner"></g>
+	  <g id="g_label_inner"></g>
+	</g>
+      </svg>
+      <svg id="svg_outer" width="500" height="500">
+	<g transform="matrix(1, 0, 0, -1, 250, 250)">
+	  <line x1="0" y1="0" x2="250" y2="0" class="equinox_line" />
+	  <circle class="sun" cx="0" cy="0" r="5" />
+	  <g id="g_outer"></g>
+	  <g id="g_label_outer"></g>
+	</g>
+      </svg>
+    </div>
+    <form class="container">
+      <table>
+	<tr>
+	  <th>Year</th>
+	  <th>Month</th>
+	  <th>Day</th>
+	</tr>
+	<tr>
+	  <td>
+	    <input id="input_y" type="number" min="-2999" max="3000" value="2016"/>
+	  </td>
+	  <td>
+	    <input id="input_m" type="number" min="0" max="13" value="1"/>
+	  </td>
+	  <td>
+	    <input id="input_d" type="number" min="0" max="32" value="1"/>
+	  </td>
+	</tr>
+      </table>
+    </form>
+  </body>
+</html>
