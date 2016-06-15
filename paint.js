@@ -207,7 +207,9 @@ function paint(T){
 	    g.appendChild(draw_orbit(rx, ry, dx, theta, RATIO_OUTER));
 	    g.appendChild(draw_planet(p.ec, RATIO_OUTER, color));
 	    g_outer.appendChild(g);
-	    g_label_outer.appendChild(draw_label(p.ec, label_text, RATIO_OUTER, color));
+	    g_label_outer.appendChild(
+		draw_label(p.ec, label_text, RATIO_OUTER, color)
+	    );
 	}
     }
 }
