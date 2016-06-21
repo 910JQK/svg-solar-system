@@ -74,7 +74,7 @@ function jd_time(JD){
  * @return Number (century)
  */
 function u_time(unix_time){
-    /* Approximation: UTC = TT */
+    /* Approximation: UTC = TDB */
     return (unix_time - J2000_UTC)/1000/86400/36525;
 }
 
